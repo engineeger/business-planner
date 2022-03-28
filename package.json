@@ -1,0 +1,23 @@
+{
+  "name": "business-planner",
+  "version": "1.0.0",
+  "description": "business-planner",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/engineeger/business-planner.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/engineeger/business-planner/issues"
+  },
+  "homepage": "https://github.com/engineeger/business-planner#readme",
+  "dependencies": {
+    "swiper": "^8.0.7"
+  }
+}
