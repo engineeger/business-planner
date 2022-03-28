@@ -1,0 +1,148 @@
+.popup-fade,
+.popup-fade2,
+.popup-fade3 {
+    display: none;
+}
+
+.popup-fade:before {
+    content: '';
+    background: #002466;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.3;
+    z-index: 9999;
+}
+
+.popup-fade2:before {
+    content: '';
+    background: #002466;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.5;
+    z-index: 9999;
+}
+
+.popup2 {
+    z-index: 99999;
+}
+
+.popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    max-width: 976px;
+    min-width: 300px;
+    z-index: 99933;
+    opacity: 1;
+}
+
+.popup-close {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+}
+
+.popup-close2 {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+}
+
+.popup-fade3:before {
+    content: '';
+    background: #002466;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.5;
+    z-index: 9999;
+}
+
+.popup3 {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    max-width: 368px;
+    min-width: 300px;
+    z-index: 99999;
+    opacity: 1;
+}
+
+.popup-close3 {
+    position: absolute;
+    top: 12px;
+    right: 10px;
+}
+
+.case_modal {
+    background: #F5F8FF;
+    box-shadow: 0px 30px 60px rgba(35, 149, 255, 0.2);
+    border-radius: 24px;
+    width: 100%;
+    padding: 52px 13px 13px 13px;
+    max-width: 368px;
+    min-width: 300px;
+    min-height: 600px;
+}
+
+.top_tabs {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+}
+
+.top_tabs .p2 {
+    font-weight: 700;
+    display: inline-flex;
+    font-size: 11px;
+    line-height: 14px;
+    background: #FFFFFF;
+    box-shadow: 0px 0px 20px rgba(35, 149, 255, 0.2);
+    border-radius: 16px;
+    padding: 6.7px 10px;
+    margin-right: 6.8px;
+}
+
+.img_text {
+    width: 100%;
+    height: 160px;
+    background: linear-gradient(0deg, rgba(0, 36, 102, 0.5), rgba(0, 36, 102, 0.5)), url(../img/card_modal_one.jpg);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 12px;
+}
+
+.img_text h3 {
+    color: #fff;
+    text-shadow: 0px 4px 20px #002466;
+    letter-spacing: -0.254348px;
+    font-feature-settings: 'case' on;
+}
+
+.case_modal p {
+    margin-bottom: 12px;
+    font-size: 14px;
+    line-height: 17px;
+}
+
+.case_modal p span {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 17px;
+}
