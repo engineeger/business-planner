@@ -2,8 +2,3 @@
 @import 'menu.css';
 @import 'modal.css';
 @import 'media.css';
-
-body {
-    transition: all 300ms;
-    transform: rotate(180deg);
-}

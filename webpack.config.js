@@ -13,7 +13,8 @@ module.exports = {
     mode: 'development',
     plugins: [
         new HTMLWebpackPlugin({
-            template: path.resolve(__dirname, '/assets/source/test.html')
+            template: path.resolve(__dirname, '/assets/source/index.html'),
+            filename: path.resolve(__dirname, 'index.html'),
         }),
         new CleanWebpackPlugin(),
         new MiniCssExtractPlugin({ filename: 'bundle.[contenthash].min.css' })
