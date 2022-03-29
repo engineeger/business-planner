@@ -8,39 +8,37 @@ module.exports = {
     entry: './assets/source/js/index',
     output: {
         filename: 'bundle.[contenthash].min.js',
-        path: path.resolve(__dirname, 'assets/build')
+        path: path.resolve(__dirname + '/assets/build')
     },
     mode: 'development',
     plugins: [
         new HTMLWebpackPlugin({
-            template: path.resolve(__dirname, '/assets/source/index.html'),
-            filename: path.resolve(__dirname, 'index.html'),
+            template: path.resolve(__dirname + '/assets/source/index.html'),
+            filename: path.resolve(__dirname + '/index.html'),
         }),
         new CleanWebpackPlugin(),
         new MiniCssExtractPlugin({ filename: 'bundle.[contenthash].min.css' })
     ],
     module: {
-        rules: [
-            {
-                test: /\.css$/i,
-                use: [
-                    MiniCssExtractPlugin.loader,
-                    {
-                        loader: "css-loader",
-                        options: {
-                            sourceMap: true,
-                            importLoaders: 1
-                        }
-                    },
-                    {
-                        loader: "postcss-loader",
-                        options: {
-                            sourceMap: true,
-                        }
-                    },
-                ],
-            }
-        ]
+        rules: [{
+            test: /\.css$/i,
+            use: [
+                MiniCssExtractPlugin.loader,
+                {
+                    loader: "css-loader",
+                    options: {
+                        sourceMap: true,
+                        importLoaders: 1
+                    }
+                },
+                {
+                    loader: "postcss-loader",
+                    options: {
+                        sourceMap: true,
+                    }
+                },
+            ],
+        }]
     },
     optimization: {
         minimizer: [
