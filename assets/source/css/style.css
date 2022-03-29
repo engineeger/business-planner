@@ -23,6 +23,7 @@ section {
     max-width: 1280px;
     margin: 0 auto;
     padding: 0 72px;
+    overflow: hidden;
 }
 
 h1,
@@ -276,6 +277,34 @@ button {
 .ser_content {
     display: flex;
     flex-wrap: wrap;
+}
+@media (min-width: 1281px) {
+    .ser_content .swiper-wrapper {
+        flex-wrap: wrap;
+    }
+
+    .ser_content .swiper-pagination {
+        display: none;
+    }
+}
+
+.swiper-pagination {
+    position: static;
+}
+
+.swiper-pagination-bullet {
+    width: 12px;
+    height: 12px;
+    border-radius: 6px;
+    border: solid 3px #fff;
+    background-color: #e4ebff;
+    opacity: 1;
+    transition: background-color 300ms;
+}
+
+.swiper-pagination-bullet-active {
+    background-color: #fff;
+    transition: background-color 300ms;
 }
 
 .card_content {
