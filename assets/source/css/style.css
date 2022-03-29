@@ -503,7 +503,7 @@ button {
 }
 
 #contact {
-    padding: 72px 0 0 0;
+    padding: 72px 72px 0;
 }
 
 .thank_modal {
@@ -595,7 +595,11 @@ button {
     display: none;
 }
 
-.yes {}
+.yes {
+    display: block;
+}
+
+.yes2 {}
 
 .no2 {}
 
