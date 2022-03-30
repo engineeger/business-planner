@@ -546,7 +546,7 @@ button {
 }
 
 #contact {
-    padding: 72px 72px 0;
+    padding: 72px 72px 72px;
 }
 
 .thank_modal {
@@ -586,11 +586,16 @@ button {
     margin-left: 25px;
 }
 
+.blur {
+    display: none;
+}
+
 .contact {
     width: 100%;
     background: #FFFFFF;
     border-radius: 28px;
-    padding: 71px 0 73px;
+    box-shadow: 0px 30px 60px rgba(35, 149, 255, 0.2);
+    padding: 71px 16px 73px 16px;
 }
 
 .contact h2 {
@@ -675,7 +680,7 @@ button {
 
 footer {
     width: 100%;
-    padding: 72px 0;
+    padding: 0 0 72px;
     background: none;
 }
 
