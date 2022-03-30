@@ -16,17 +16,16 @@ function initSlider(elem, selector, conf) {
 function projectSliderFunc() {
     const sliderProjects = document.querySelector('.js-slider-projects:not(.swiper-initialized)')
     const windowWidth = window.innerWidth
-    const initStatus = windowWidth <= 1279
+    const initStatus = windowWidth <= 1280
 
     if (initStatus) {
         initSlider(
             sliderProjects,
-            '.js-slider-projects',
-            {
+            '.js-slider-projects', {
                 loop: true,
                 mousewheel: true,
                 slidesPerView: 'auto',
-                modules: [ Mousewheel, Pagination ],
+                modules: [Mousewheel, Pagination],
 
                 pagination: {
                     el: '.js-slider-projects .swiper-pagination',
@@ -52,13 +51,12 @@ export default function sliders() {
 
     initSlider(
         sliderServices,
-        '.js-slider-services',
-        {
+        '.js-slider-services', {
             loop: true,
             mousewheel: true,
             slidesPerView: 'auto',
             spaceBetween: 16,
-            modules: [ Mousewheel, Pagination ],
+            modules: [Mousewheel, Pagination],
 
             pagination: {
                 el: '.swiper-pagination',
