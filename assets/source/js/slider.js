@@ -1,4 +1,4 @@
-import Swiper, { Pagination, Mousewheel } from 'swiper'
+import Swiper, { Pagination } from 'swiper'
 
 import 'swiper/css'
 import 'swiper/css/navigation'
@@ -23,9 +23,8 @@ function projectSliderFunc() {
             sliderProjects,
             '.js-slider-projects', {
                 loop: true,
-                mousewheel: true,
                 slidesPerView: 'auto',
-                modules: [Mousewheel, Pagination],
+                modules: [Pagination],
 
                 pagination: {
                     el: '.js-slider-projects .swiper-pagination',
@@ -53,10 +52,9 @@ export default function sliders() {
         sliderServices,
         '.js-slider-services', {
             loop: true,
-            mousewheel: true,
             slidesPerView: 'auto',
             spaceBetween: 16,
-            modules: [Mousewheel, Pagination],
+            modules: [Pagination],
 
             pagination: {
                 el: '.swiper-pagination',
