@@ -46,9 +46,13 @@ export default function form() {
                 fetch('./ajaxSend.php', {
                     method: 'POST',
                     body: formData
-                }).then((res) => {
-                    console.log(res)
-                    if (res.ok) {
+                }).then((response) => {
+                    console.log(response)
+                    return response
+                })
+                .then((data) => {
+                    console.log(data)
+                    if (data) {
                         const modalForm = document.querySelector('.js-modal.open[data-modal="formSend"]')
                         const modalOk = document.querySelector('.js-modal[data-modal="sendOk"]')
                         if (modalForm) modalForm.classList.remove('open')
@@ -56,8 +60,6 @@ export default function form() {
                     } else {
                         throw new Error()
                     }
-                }).catch(() => {
-                    throw new Error()
                 })
             }
 
