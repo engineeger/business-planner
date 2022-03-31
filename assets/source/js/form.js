@@ -1,31 +1,60 @@
+import IMask from 'imask'
+
 export default function form() {
-    const forms = [...document.querySelectorAll('.js-form')]
+    const tels = document.querySelectorAll('.js-tel')
 
-    if (!forms.length) return false
+    tels.forEach(tel => {
+        IMask(
+            tel,
+            { mask: '+{7} (000) 000-00-00' }
+        )
+    })
 
-    forms.forEach(form => {
-        const callback = function (mutationsList, observer) {
-            for (let mutation of mutationsList) {
-                if (mutation.type === 'childList') {
-                    console.log('A child node has been added or removed.')
-                } else if (mutation.type === 'attributes') {
-                    console.log('The ' + mutation.attributeName + ' attribute was modified.')
+    const inputs = document.querySelectorAll('input')
+    const textareas = document.querySelectorAll('textarea')
+    const fields = [...inputs, ...textareas]
+
+    fields.forEach(field => {
+        field.onkeyup = e => {
+            const parent = e.target.closest('.input_box')
+            const status = parent.querySelector('.input_img')
+            const length = e.target.type === 'tel' ? 18 : 3
+
+            status.classList.add('show')
+            e.target.value.length < length ? parent.classList.add('invalid') : parent.classList.remove('invalid')
+            status.src = `./assets/source/img/${e.target.value.length < length ? 'no' : 'yes'}.png`
+        }
+    })
+
+    document.body.addEventListener('click', e => {
+        if (e.target.closest('.js-submit')) {
+            const parent = e.target.closest('.js-submit')
+            const form = parent.closest('.js-form')
+            const invalids = form.querySelectorAll('.invalid')
+            const shows = form.querySelectorAll('.show')
+            const inputs = form.querySelectorAll('input')
+            const textareas = form.querySelectorAll('textarea')
+            const fields = [...inputs, ...textareas]
+
+            if (!invalids.length && shows.length === fields.length) {
+                let formData = new FormData()
+
+                fields.forEach(field => {
+                    formData.append(field.name, field.value)
+                })
+
+                try {
+                    fetch('./ajaxSend.php', {
+                        method: 'POST',
+                        body: formData
+                    });
+                    console.log('Успех:', JSON.stringify(result));
+                } catch (error) {
+                    console.error('Ошибка:', error);
                 }
             }
-        }
-        const observer = new MutationObserver(callback)
-        observer.observe(
-            form,
-            {
-                attributes: true,
-                childList: true,
-                subtree: true
-            }
-        )
 
-        form.onsubmit = (e) => {
-            e.preventDefault();
-            window.history.back();
+            form.onsubmit = event => event.preventDefault()
         }
     })
 }

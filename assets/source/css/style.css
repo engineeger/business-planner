@@ -249,6 +249,10 @@ button {
     padding: 0 64px;
 }
 
+#projects {
+    padding: 0;
+}
+
 .services {
     padding: 30px 0 0;
 }
@@ -268,7 +272,7 @@ button {
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    margin: 0 8px 16px 8px;
+    margin: 0 16px 16px 0;
 }
 
 .card img {
@@ -354,6 +358,8 @@ button {
 
 .projects {
     padding: 126px 0 0;
+    margin: 0 72px;
+    overflow: hidden;
 }
 
 .projects h1 {
@@ -617,7 +623,8 @@ button {
     margin: 0 auto;
 }
 
-.contact_form input {
+.contact_form input,
+.contact_form textarea {
     margin-bottom: 12px;
     text-align: center;
     border: 1px solid rgba(0, 36, 102, 0.2);
@@ -629,6 +636,7 @@ button {
     outline: none;
     color: #002466;
     width: 100%;
+    font-family: Roboto, sans-serif;
 }
 
 .input_box {
@@ -642,13 +650,9 @@ button {
     display: none;
 }
 
-.yes {
+.show {
     display: block;
 }
-
-.yes2 {}
-
-.no2 {}
 
 .contact_form textarea {
     border: 1px solid rgba(0, 36, 102, 0.2);

@@ -21,7 +21,7 @@
                     <button class="btn_menu btn_menu_none_two popup-open js-open-modal" data-target="formSend">
                         Получить консультацию
                     </button>
-                    <input class="checkbox" type="checkbox" name="" id="" />
+                    <input class="checkbox js-menu" type="checkbox"/>
                     <div class="hamburger-lines">
                         <div class="fon"></div>
                         <span class="line line1"></span>
@@ -36,7 +36,7 @@
                         <li><a href="#about">Проекты</a></li>
                         <li><a href="#contact">Контакты</a></li>
                         <li><a href="#">+7 927 236 56 20</a></li>
-                        <button class="btn_menu btn_menu_none popup-open">Получить консультацию</button>
+                        <button class="btn_menu btn_menu_none popup-open js-open-modal" data-target="formSend">Получить консультацию</button>
                         <img class="img_menu" src="./assets/source/img/logo.svg" alt="">
                     </div>
                 </div>
@@ -307,17 +307,18 @@
             <h6>Мы ответим на все вопросы и подготовим предложение специально для вас, с учетом специфики вашего бизнеса.</h6>
             <form class="contact_form js-form" action="">
                 <div class="input_box">
-                    <input placeholder="Имя Фамилия" type="text">
-                    <img class="yes input_img" src="./assets/source/img/yes.png" alt="">
-                    <img class="no input_img" src="./assets/source/img/no.png" alt="">
+                    <input name="fio" placeholder="Имя Фамилия" type="text">
+                    <img class="input_img" src="" alt="">
                 </div>
 
                 <div class="input_box">
-                    <input placeholder="+7 912 345 67 89" type="tel">
-                    <img class="yes2 input_img" src="./assets/source/img/yes.png" alt="">
-                    <img class="no2 input_img" src="./assets/source/img/no.png" alt="">
+                    <input name="phone" placeholder="+7 912 345 67 89" type="tel" class="js-tel">
+                    <img class="input_img" src="" alt="">
                 </div>
-                <textarea required placeholder="Комментарий" rows="3" name="text"></textarea>
+                <div class="input_box">
+                    <textarea name="comment" placeholder="Комментарий" rows="3" name="text"></textarea>
+                    <img class="input_img" src="" alt="">
+                </div>
                 <button class="btn_form js-submit">Отправить заявку</button>
             </form>
         </div>
@@ -343,20 +344,21 @@
             <div class="contact">
                 <h2 class="h2">Свяжитесь с нами уже сейчас!</h2>
                 <h6>Мы ответим на все вопросы и подготовим предложение специально для вас, с учетом специфики вашего бизнеса.</h6>
-                <form class="contact_form" action="">
+                <form class="contact_form js-form" action="">
                     <div class="input_box">
-                        <input placeholder="Имя Фамилия" type="text">
-                        <img class="yes input_img" src="./assets/source/img/yes.png" alt="">
-                        <img class="no input_img" src="./assets/source/img/no.png" alt="">
+                        <input name="fio" placeholder="Имя Фамилия" type="text">
+                        <img class="input_img" src="" alt="">
                     </div>
 
                     <div class="input_box">
-                        <input placeholder="+7 912 345 67 89" type="tel">
-                        <img class="yes2 input_img" src="./assets/source/img/yes.png" alt="">
-                        <img class="no2 input_img" src="./assets/source/img/no.png" alt="">
+                        <input name="phone" placeholder="+7 912 345 67 89" type="tel" class="js-tel">
+                        <img class="input_img" src="" alt="">
                     </div>
-                    <textarea required placeholder="Комментарий" rows="3" name="text"></textarea>
-                    <button class="btn_form popup-open2 popup-open3">Отправить заявку</button>
+                    <div class="input_box">
+                        <textarea name="comment" placeholder="Комментарий" rows="3" name="text"></textarea>
+                        <img class="input_img" src="" alt="">
+                    </div>
+                    <button class="btn_form popup-open2 popup-open3 js-submit">Отправить заявку</button>
                 </form>
             </div>
         </div>

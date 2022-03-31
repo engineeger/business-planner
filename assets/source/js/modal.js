@@ -1,9 +1,9 @@
-export default function modal() {
-    function scrollChanger() {
-        document.body.classList.toggle('no-scroll')
-        document.documentElement.classList.toggle('no-scroll')
-    }
+function scrollChanger() {
+    document.body.classList.toggle('no-scroll')
+    document.documentElement.classList.toggle('no-scroll')
+}
 
+export default function modal() {
     document.body.addEventListener('click', (e) => {
         if (e.target.closest('.js-open-modal')) {
             const parent = e.target.closest('.js-open-modal')
