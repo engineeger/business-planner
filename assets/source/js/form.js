@@ -48,7 +48,7 @@ export default function form() {
                         method: 'POST',
                         body: formData
                     }).then((response) => {
-                        return response.json();
+                        return response;
                     }).then((data) => {
                         if (data === 'send') {
                             const modalForm = document.querySelector('.js-modal.open[data-modal="formSend"]')
