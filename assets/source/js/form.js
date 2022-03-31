@@ -47,11 +47,12 @@ export default function form() {
                     method: 'POST',
                     body: formData
                 }).then((res) => {
+                    console.log(res)
                     if (res.ok) {
                         const modalForm = document.querySelector('.js-modal.open[data-modal="formSend"]')
                         const modalOk = document.querySelector('.js-modal[data-modal="sendOk"]')
-
                         if (modalForm) modalForm.classList.remove('open')
+                        modalOk.classList.add('open')
                     } else {
                         throw new Error()
                     }
