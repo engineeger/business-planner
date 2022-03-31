@@ -47,8 +47,17 @@ export default function form() {
                     fetch('./ajaxSend.php', {
                         method: 'POST',
                         body: formData
+                    }).then((response) => {
+                        return response.json();
+                    }).then((data) => {
+                        if (data === 'send') {
+                            const modalForm = document.querySelector('.js-modal.open[data-modal="formSend"]')
+                            const modalOk = document.querySelector('.js-modal[data-modal="sendOk"]')
+                            
+                            if (modalForm) modalForm.classList.remove('open')
+                            
+                        };
                     });
-                    console.log('Успех:', JSON.stringify(result));
                 } catch (error) {
                     console.error('Ошибка:', error);
                 }
