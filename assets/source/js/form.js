@@ -43,24 +43,21 @@ export default function form() {
                     formData.append(field.name, field.value)
                 })
 
-                try {
-                    fetch('./ajaxSend.php', {
-                        method: 'POST',
-                        body: formData
-                    }).then((response) => {
-                        return response;
-                    }).then((data) => {
-                        if (data === 'send') {
-                            const modalForm = document.querySelector('.js-modal.open[data-modal="formSend"]')
-                            const modalOk = document.querySelector('.js-modal[data-modal="sendOk"]')
-                            
-                            if (modalForm) modalForm.classList.remove('open')
-                            
-                        };
-                    });
-                } catch (error) {
-                    console.error('Ошибка:', error);
-                }
+                fetch('./ajaxSend.php', {
+                    method: 'POST',
+                    body: formData
+                }).then((res) => {
+                    if (res.ok) {
+                        const modalForm = document.querySelector('.js-modal.open[data-modal="formSend"]')
+                        const modalOk = document.querySelector('.js-modal[data-modal="sendOk"]')
+
+                        if (modalForm) modalForm.classList.remove('open')
+                    } else {
+                        throw new Error()
+                    }
+                }).catch(() => {
+                    throw new Error()
+                })
             }
 
             form.onsubmit = event => event.preventDefault()
