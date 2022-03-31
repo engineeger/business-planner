@@ -110,16 +110,24 @@ html.no-scroll {
     box-shadow: 0px 30px 60px rgba(35, 149, 255, 0.2);
     border-radius: 24px;
     width: 100%;
-    padding: 52px 13px 13px 13px;
+    padding: 0 13px 13px 13px;
     max-width: 368px;
     min-width: 300px;
     min-height: 600px;
+    max-height: 600px;
+    overflow-y: scroll;
+    padding-bottom: 15px;
+    -ms-overflow-style: none;
+}
+
+.case_modal::-webkit-scrollbar {
+    width: 0px;
+    background: transparent;
 }
 
 .top_tabs {
-    position: absolute;
-    top: 12px;
-    left: 12px;
+    position: relative;
+    margin-top: 12px;
 }
 
 .top_tabs .p2 {
@@ -137,12 +145,48 @@ html.no-scroll {
 .img_text {
     width: 100%;
     height: 160px;
-    background: linear-gradient(0deg, rgba(0, 36, 102, 0.5), rgba(0, 36, 102, 0.5)), url(../img/card_modal_one.jpg);
     border-radius: 12px;
     display: flex;
     align-items: center;
     justify-content: center;
     margin-bottom: 12px;
+    text-align: center;
+}
+
+.img_text_one {
+    background: linear-gradient(0deg, rgba(0, 36, 102, 0.5), rgba(0, 36, 102, 0.5)), url(../img/ufa.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.img_text_two {
+    background: linear-gradient(0deg, rgba(0, 36, 102, 0.5), rgba(0, 36, 102, 0.5)), url(../img/zapusk.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.img_text_three {
+    background: linear-gradient(0deg, rgba(0, 36, 102, 0.5), rgba(0, 36, 102, 0.5)), url(../img/techno.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.img_text_four {
+    background: linear-gradient(0deg, rgba(0, 36, 102, 0.5), rgba(0, 36, 102, 0.5)), url(../img/delo.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.img_text_five {
+    background: linear-gradient(0deg, rgba(0, 36, 102, 0.5), rgba(0, 36, 102, 0.5)), url(../img/modern.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.img_text_six {
+    background: linear-gradient(0deg, rgba(0, 36, 102, 0.5), rgba(0, 36, 102, 0.5)), url(../img/rezed.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .img_text h3 {
