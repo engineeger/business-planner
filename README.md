@@ -1,2 +1,0 @@
-# business-planner
-business-planner
