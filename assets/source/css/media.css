@@ -61,6 +61,10 @@
     .logo_img {
         width: 140px;
     }
+    .case {
+        margin-left: 16px !important;
+        margin-right: 0 !important;
+    }
     h1 {
         font-size: 26px;
         line-height: 28px;
@@ -301,6 +305,7 @@
     .card {
         max-height: 520px;
         width: 312px;
+        margin: 0 8px 16px 16px;
     }
     .ser_one {
         margin-top: 25px;
