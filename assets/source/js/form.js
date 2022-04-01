@@ -11,8 +11,7 @@ export default function form() {
     })
 
     const inputs = document.querySelectorAll('input')
-    const textareas = document.querySelectorAll('textarea')
-    const fields = [...inputs, ...textareas]
+    const fields = [...inputs]
 
     fields.forEach(field => {
         field.onkeyup = e => {
@@ -33,8 +32,7 @@ export default function form() {
             const invalids = form.querySelectorAll('.invalid')
             const shows = form.querySelectorAll('.show')
             const inputs = form.querySelectorAll('input')
-            const textareas = form.querySelectorAll('textarea')
-            const fields = [...inputs, ...textareas]
+            const fields = [...inputs]
 
             if (!invalids.length && shows.length === fields.length) {
                 let formData = new FormData()
@@ -47,11 +45,9 @@ export default function form() {
                     method: 'POST',
                     body: formData
                 }).then((response) => {
-                    console.log(response)
                     return response
                 })
                 .then((data) => {
-                    console.log(data)
                     if (data) {
                         const modalForm = document.querySelector('.js-modal.open[data-modal="formSend"]')
                         const modalOk = document.querySelector('.js-modal[data-modal="sendOk"]')
