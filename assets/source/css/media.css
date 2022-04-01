@@ -49,6 +49,9 @@
         font-size: 14px;
         padding: 12px 16px;
     }
+    .right_r {
+        right: 30px;
+    }
 }
 
 @media only screen and (max-width: 1010px) {
@@ -160,6 +163,9 @@
     }
     .m_r_16 {
         margin-right: 0;
+    }
+    .sw_transform {
+        margin-left: 95px;
     }
 }
 
@@ -386,8 +392,7 @@
     .contact_form textarea {
         margin-bottom: 24px;
     }
-    .footer,
-    .footer_content {
+    .footer {
         flex-direction: column;
     }
     .footer img {
@@ -398,6 +403,7 @@
     }
     .footer_content {
         margin-left: 0;
+        flex-direction: column-reverse;
     }
     .projects {
         padding: 34px 0 0;
@@ -413,6 +419,8 @@
     }
     footer {
         padding-bottom: 64px;
+        display: flex;
+        flex-direction: column-reverse;
     }
     .contact_form textarea {
         height: 228px;
@@ -422,6 +430,14 @@
         position: absolute;
         right: 35px;
         top: 6px;
+    }
+    .a4 {
+        margin-bottom: 0;
+        margin-top: 12px !important;
+        max-width: 188px;
+        font-size: 12px;
+        line-height: 14px;
+        margin: 0 auto;
     }
 }
 
