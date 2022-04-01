@@ -13,6 +13,13 @@ export default function menu () {
             if (screenWidth <= 992) scrollChanger()
         }
     })
+    
+    document.body.addEventListener('click', e => {
+        if (e.target.closest('.js-close-menu')) {
+            status.checked = false
+            if (screenWidth <= 992) scrollChanger()
+        }
+    })
 
     document.querySelector('.js-menu-status').onclick = () => {
         if (screenWidth <= 992) scrollChanger()
