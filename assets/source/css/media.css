@@ -22,10 +22,6 @@
     section {
         padding: 0 40px;
     }
-    .projects,
-    .services {
-        margin: 0 40px;
-    }
     .navbar {
         padding: 16px 40px;
     }
@@ -40,6 +36,10 @@
         position: absolute;
         right: 35px;
         top: 16px;
+    }
+    .projects,
+    .services {
+        margin: 0 40px;
     }
 }
 
@@ -60,10 +60,6 @@
 @media only screen and (max-width: 992px) {
     .logo_img {
         width: 140px;
-    }
-    .case {
-        margin-left: 16px !important;
-        margin-right: 0 !important;
     }
     h1 {
         font-size: 26px;
@@ -165,10 +161,6 @@
     .m_r_16 {
         margin-right: 0;
     }
-    .projects,
-    .services {
-        margin: 0 0;
-    }
 }
 
 @media (min-width: 993px) {
@@ -263,6 +255,7 @@
         line-height: 17px;
     }
     .case {
+        margin: 0 16px 16px 0;
         height: 430px;
         width: 312px;
     }
@@ -303,9 +296,9 @@
         margin-bottom: 20px;
     }
     .card {
+        margin: 0 16px 16px 0;
         max-height: 520px;
         width: 312px;
-        margin: 0 8px 16px 16px;
     }
     .ser_one {
         margin-top: 25px;
@@ -442,9 +435,6 @@
     .btn_header {
         width: 100%;
     }
-    #services {
-        padding: 0 16px;
-    }
     section {
         padding: 0 16px;
     }
@@ -486,6 +476,10 @@
     }
     .navbar .menu-items {
         max-width: 224px !important;
+    }
+    .projects,
+    .services {
+        margin: 0 16px;
     }
 }
 

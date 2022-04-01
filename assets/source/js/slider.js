@@ -53,7 +53,6 @@ export default function sliders() {
         '.js-slider-services', {
             loop: true,
             slidesPerView: 'auto',
-            spaceBetween: 16,
             modules: [Pagination],
 
             pagination: {

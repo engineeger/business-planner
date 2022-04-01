@@ -383,7 +383,7 @@ button {
     height: 504px;
     max-height: 504px;
     display: flex;
-    margin-bottom: 16px;
+    margin: 0 16px 16px 0;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
