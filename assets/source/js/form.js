@@ -32,9 +32,10 @@ export default function form() {
             const invalids = form.querySelectorAll('.invalid')
             const shows = form.querySelectorAll('.show')
             const inputs = form.querySelectorAll('input')
-            const fields = [...inputs]
+            const textareas = form.querySelectorAll('textarea')
+            const fields = [...inputs, ...textareas]
 
-            if (!invalids.length && shows.length === fields.length) {
+            if (!invalids.length && shows.length === inputs.length) {
                 let formData = new FormData()
 
                 fields.forEach(field => {
