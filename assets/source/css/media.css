@@ -164,9 +164,6 @@
     .m_r_16 {
         margin-right: 0;
     }
-    .sw_transform {
-        margin-left: 95px;
-    }
 }
 
 @media (min-width: 993px) {
