@@ -9,14 +9,14 @@ export default function modal() {
             const parent = e.target.closest('.js-open-modal')
             const modal = document.querySelector(`[data-modal="${parent.dataset.target}"]`)
             modal.classList.add('open')
-            scrollChanger()
+            if (parent.dataset.target !== 'formSend') scrollChanger()
         }
 
         if (e.target.closest('.js-modal-close')) {
             const parent = e.target.closest('.js-modal-close').closest('.js-modal')
             const modal = parent.closest('.js-modal')
             modal.classList.remove('open')
-            scrollChanger()
+            if (modal.dataset.modal !== 'formSend') scrollChanger()
         }
     })
 }

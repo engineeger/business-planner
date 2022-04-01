@@ -103,6 +103,7 @@ html.no-scroll {
     position: absolute;
     top: 12px;
     right: 10px;
+    z-index: 1;
 }
 
 .case_modal {

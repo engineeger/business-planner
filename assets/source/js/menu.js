@@ -4,23 +4,24 @@ function scrollChanger() {
 }
 
 export default function menu () {
+    var screenWidth = window.innerWidth
+    const status = document.querySelector('.js-menu-status')
+    
     document.querySelector('.js-menu').addEventListener('click', e => {
         if (e.target.closest('li')) {
-            const status = document.querySelector('.js-menu-status')
             status.checked = !status.checked
-            scrollChanger()
+            if (screenWidth <= 992) scrollChanger()
         }
     })
 
     document.querySelector('.js-menu-status').onclick = () => {
-        scrollChanger()
+        if (screenWidth <= 992) scrollChanger()
     }
 
     window.addEventListener('resize', () => {
-        const status = document.querySelector('.js-menu-status')
-        if(status.checked) {
-            status.checked = !status.checked
-            scrollChanger()
-        }
+        screenWidth = window.innerWidth
+            status.checked = false
+            document.body.classList.remove('no-scroll')
+            document.documentElement.classList.remove('no-scroll')
     })
 }
