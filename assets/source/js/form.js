@@ -52,6 +52,8 @@ export default function form() {
                     if (data) {
                         const modalForm = document.querySelector('.js-modal.open[data-modal="formSend"]')
                         const modalOk = document.querySelector('.js-modal[data-modal="sendOk"]')
+                        document.documentElement.classList.add('no-scroll')
+                        document.body.classList.add('no-scroll')
                         if (modalForm) modalForm.classList.remove('open')
                         modalOk.classList.add('open')
                     } else {

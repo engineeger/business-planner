@@ -39,7 +39,7 @@
     }
     .projects,
     .services {
-        margin: 0 40px;
+        margin: 0 0 0 40px;
     }
 }
 
@@ -492,7 +492,7 @@
     }
     .projects,
     .services {
-        margin: 0 16px;
+        margin: 0 0 0 16px;
     }
 }
 
