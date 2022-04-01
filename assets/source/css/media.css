@@ -64,9 +64,6 @@
     .logo_img {
         width: 140px;
     }
-    .sw_transform {
-        transform: translate3d(-2304px, 0px, 0px) !important;
-    }
     .case {
         margin-left: 16px !important;
         margin-right: 0 !important;
@@ -175,6 +172,9 @@
     .services {
         margin: 0 0;
     }
+    .sw_transform {
+        margin-left: 95px;
+    }
 }
 
 @media (min-width: 993px) {
@@ -184,9 +184,6 @@
 }
 
 @media only screen and (max-width: 768px) {
-    .sw_transform {
-        transform: translate3d(-2295px, 0, 0)!important;
-    }
     .header {
         padding-top: 0;
         flex-direction: column-reverse;
@@ -402,8 +399,7 @@
     .contact_form textarea {
         margin-bottom: 24px;
     }
-    .footer,
-    .footer_content {
+    .footer {
         flex-direction: column;
     }
     .footer img {
@@ -414,6 +410,7 @@
     }
     .footer_content {
         margin-left: 0;
+        flex-direction: column-reverse;
     }
     .projects {
         padding: 34px 0 0;
@@ -429,6 +426,8 @@
     }
     footer {
         padding-bottom: 64px;
+        display: flex;
+        flex-direction: column-reverse;
     }
     .contact_form textarea {
         height: 228px;
@@ -438,6 +437,14 @@
         position: absolute;
         right: 35px;
         top: 6px;
+    }
+    .a4 {
+        margin-bottom: 0;
+        margin-top: 12px !important;
+        max-width: 188px;
+        font-size: 12px;
+        line-height: 14px;
+        margin: 0 auto;
     }
 }
 
